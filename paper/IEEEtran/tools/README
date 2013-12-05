@@ -1,0 +1,125 @@
+
+December 27, 2012
+
+
+The IEEEtrantools.sty package provides several commands from the
+IEEEtran.cls file so that they can be used under other LaTeX classes. The
+user guide provided here covers only the differences in the use of the
+commands from those provided by IEEEtran.cls. For complete documentation
+on these commands, see the relevant sections in the IEEEtran_HOWTO manual
+of the IEEEtran LaTeX class, specifically the section covering IEEE-style
+lists and the Appendix covering the IEEEeqnarray commands.
+
+The IEEEtrantools.sty package provides the following IEEEtran.cls commands:
+
+ 1. \IEEEPARstart which produces large initial "drop cap" letters.
+
+ 2. the \bstctlcite command for the control entry types of IEEEtran.bst
+    V1.00 and later
+
+ 3. the IEEE itemize, enumerate and description list environments
+
+ 4. the complete IEEEeqnarray family for producing multiline equations
+    as well as matrices and tables, including the IEEEeqnarray support
+    commands.
+
+ 5. The IEEEproof environment.
+ 
+ 6. \IEEEauthorrefmark{}
+
+IEEEtrantools.sty is not needed and should not be used with IEEEtran.cls.
+
+For helpful tips, answers to frequently asked questions and other support,
+visit the IEEEtrantools support page at my website:
+
+http://www.michaelshell.org/tex/ieeetran/tools/
+
+
+Enjoy!
+
+Michael Shell
+http://www.michaelshell.org/
+
+
+*******
+12/2012 V1.3 (V1.8 of IEEEtran.cls) changes:
+
+ 1) No longer redefines the standard LaTeX itemize, enumerate and 
+    description (IED) lists by default. (e.g., the older package option
+    "retainorgcmds" is now the default behavior.) A new package option,
+    "redeflists", can be invoked to redefine the standard IED list
+    environments to their IEEE versions. IEEEitemize, IEEEenumerate and
+    IEEEdescription remain available in any case. The redeflists option
+    may not be compatible with other packages that alter the standard
+    IED list environments.
+
+ 2) Added new *-forms of \IEEEyesnumber*, \IEEEnonumber*, \IEEEyessubnumber*,
+    and \IEEEnosubnumber* (the non-star form of the latter is also new) which
+    persist across IEEEeqnarray lines until countermanded. To provide for
+    continued subequations across instances of IEEEeqnarrays as well as for
+    subequations that follow a main equation (e.g., 14, 14a, 14b ...)
+    \IEEEyessubnumber no longer automatically increments the equation number
+    on it's first invocation of a subequation group. Invoke both
+    \IEEEyesnumber\IEEEyessubnumber together to start a new
+    equation/subequation group.
+
+ 3) Hyperref links now work with IEEEeqnarray equations.
+    Thanks to Stefan M. Moser for reporting this problem.
+
+ 4) Now provides the IEEEproof environment, as well as the
+    \IEEEQEDhere, \IEEEQEDhereeqn and \IEEEQEDoff commands.
+    Also, \IEEEproofindentspace allows users to change the
+    IEEEproof indentation via \renewcommand.
+    Thanks to Mark D. Butala, Hennadiy Leontyev and Stefan M. Moser
+    for suggesting this. Special thanks to Stefan M. Moser for beta
+    testing and additional suggestions which improved IEEEproof.
+
+ 5) Revised \IEEEeqnarraymulticol{} to allow inner alignments without
+    requiring extra containing braces to prevent an incomplete \ifx error.
+    Thanks to Stefan M. Moser and Auke van der Valk for reporting this
+    problem.
+
+ 6) Added \IEEEauthorrefmark.
+
+ 7) Removed support for legacy IED list commands.
+    IEEEtrantools no longer defines or references \labelindent so as to
+    avoid namespace problems with list packages that define it.
+    Thanks to Sven Köhler for reporting the problem with enumitem.sty.
+
+********************************** Files **********************************
+
+README                - This file.
+
+IEEEtrantools.sty     - The LaTeX package file.
+
+IEEEtrantools_doc.txt - The user manual - supplementary to the 
+                        IEEEtran_HOWTO manual.
+
+changelog.txt         - The complete changelog history.
+
+***************************************************************************
+Legal Notice:
+This code is offered as-is without any warranty either expressed or
+implied; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE! 
+User assumes all risk.
+In no event shall IEEE or any contributor to this code be liable for
+any damages or losses, including, but not limited to, incidental,
+consequential, or any other damages, resulting from the use or misuse
+of any information contained here.
+
+All comments are the opinions of their respective authors and are not
+necessarily endorsed by the IEEE.
+
+This work is distributed under the LaTeX Project Public License (LPPL)
+( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+distributed and modified. A copy of the LPPL, version 1.3, is included
+in the base LaTeX documentation of all distributions of LaTeX released
+2003/12/01 or later.
+Retain all contribution notices and credits.
+** Modified files should be clearly indicated as such, including  **
+** renaming them and changing author support contact information. **
+
+File list of work: IEEEtrantools.sty, IEEEtrantools_doc.txt, changelog.txt
+***************************************************************************
+
