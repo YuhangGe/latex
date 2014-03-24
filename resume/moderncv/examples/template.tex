@@ -9,7 +9,7 @@
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
@@ -20,24 +20,24 @@
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+\setlength{\hintscolumnwidth}{3.1cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
-\name{John}{Doe}
-\title{Resumé title}                               % optional, remove / comment the line if not wanted
-\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
-\phone[mobile]{+1~(234)~567~890}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
-\phone[fixed]{+2~(345)~678~901}
-\phone[fax]{+3~(456)~789~012}
-\email{john@doe.org}                               % optional, remove / comment the line if not wanted
-\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
-\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
-\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
-\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
-\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
-\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+\name{Ge}{Yuhang}
+\title{github.com/YuhangGe}                               % optional, remove / comment the line if not wanted
+\address{nanjing university}{1990-04-02}{}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{186~8275~0306}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{abraham1@163.com}                               % optional, remove / comment the line if not wanted
+\homepage{www.xiaoge.me}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+\social[twitter]{@xiaoge\_me}                             % optional, remove / comment the line if not wanted
+%\social[github]{1990-04-02}                              % optional, remove / comment the line if not wanted
+%\extrainfo{1990-04-02}                 % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{header}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
 %\makeatletter
@@ -57,108 +57,86 @@
 \makecvtitle
 
 \section{Education}
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}  % arguments 3 to 6 can be left empty
-\cventry{year--year}{Degree}{Institution}{City}{\textit{Grade}}{Description}
+\cventry{2012--2015}{Master}{Nanjing University}{Software Institution}{\textit{Software Engineering}}{I had been recommended for admission to graduate school, mainly engaged in the field of workflow mining research}  % arguments 3 to 6 can be left empty
+\cventry{2008--2012}{Bachelor}{Nanjing Universitiy}{Software Institution}{\textit{Software Engineering}}{Majors including data structures, network theory, software system architecture, etc.}
+
+\section{Scholarship}
+\cvitemwithcomment{2011-10}{Renmin Scholarship, \quad{}School Level}{gap, top 20\%}
+\cvitemwithcomment{2010-10}{National Scholarship, National Level}{gpa, top 2.8\%}
+\cvitemwithcomment{2009-10}{Renmin Scholarship, \quad{}School Level}{gap, top 20\%}
 
 \section{Master thesis}
-\cvitem{title}{\emph{Title}}
-\cvitem{supervisors}{Supervisors}
-\cvitem{description}{Short thesis abstract}
+\cvitem{title}{\emph{Mining Process Model from Event Logs with Pre-Tasks}}
+\cvitem{supervisors}{Jidong Ge, Bin Luo}
+\cvitem{description}{Explore a new algorithm for mining workflow process. Define the process of the algorithm, constraints, and application scenarios. This paper are accepted by \emph{APBPM2014}(Asia Pacific conference on Business Process Management 2014). I will go to Australia to participate in July. Meanwhile, the algorithm has been developed as an open source project, in the form of plug-in based on \emph{Prom6} framework, and hosted on \emph{Github}.}
 
-\section{Experience}
-\subsection{Vocational}
-\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
-Detailed achievements:%
-\begin{itemize}%
-\item Achievement 1;
-\item Achievement 2, with sub-achievements:
-  \begin{itemize}%
-  \item Sub-achievement (a);
-  \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
-    \begin{itemize}
-    \item Sub-sub-achievement i;
-    \item Sub-sub-achievement ii;
-    \item Sub-sub-achievement iii;
-    \end{itemize}
-  \item Sub-achievement (c);
-  \end{itemize}
-\item Achievement 3.
-\end{itemize}}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
-\subsection{Miscellaneous}
-\cventry{year--year}{Job title}{Employer}{City}{}{Description}
+\section{Project Experience}
+\cvitem{project name}{\subsectionstyle{BPM System of ZhiZaoLian Company}}
+\cvitem{project time}{\textbf{2013-12\ to\ now}}
+\cvitem{role in project}{\textbf{Product Manager and System Architect}}
+\cvitem{description}{cooperation project of Nantong ZhiZaoLian Company (non-IT company) and NJU BPM Software Lab. Use java ee and JBPM engine to develop. In this project, I'm responsible for the investigation, including the resident needs, database design, Spring + Hibernate 
++ JBPM5.3 system architecture and construction, selecting and modifing front-end templates. Mainly involved in the development of front web development.}
+\newpage{}
 
-\section{Languages}
-\cvitemwithcomment{Language 1}{Skill level}{Comment}
-\cvitemwithcomment{Language 2}{Skill level}{Comment}
-\cvitemwithcomment{Language 3}{Skill level}{Comment}
 
-\section{Computer skills}
-\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+\cvitem{project name}{\subsectionstyle{FiiNote web}}
+\cvitem{project time}{\textbf{2012-04\ to\ now}}
+\cvitem{role in project}{\textbf{independent development on html5 product}}
+\cvitem{description}{FiiNote is the most convenient note app for android. It can be downloaded from major markets such as Google App Store. This project develop the html5 platform version. This project developed almost all equivalent features of Android app, including text layout and rendering (compatible with Arabic text), handwritten text, various types of doodle brushes, floating textbox, and simple slide. Compatible with mainstream PC browser, and iPad and win8 tablet. You can use multi-touch gestures. Demonstration is avaliable in the interview.}
+\vspace{1em}
 
-\section{Interests}
-\cvitem{hobby 1}{Description}
-\cvitem{hobby 2}{Description}
-\cvitem{hobby 3}{Description}
+\cvitem{project name}{\subsectionstyle{KanKan Talent Show App}}
+\cvitem{project time}{\textbf{2013-05\ to\ 2013-07}}
+\cvitem{role in project}{\textbf{database design, server-side logic, management system}}
+\cvitem{description}{An talent show app on Android, belong to one media industry. This project is the company's outsourcing business. With this app, users can sign up to participate in activities, upload photos at the event. They can score or point of praise for other people's photos. Activity elected popularity after expiration picture. The project use php (yii framework) + mysql 
++ nginx Architecture}
+\vspace{1em}
 
-\section{Extra 1}
-\cvlistitem{Item 1}
-\cvlistitem{Item 2}
-\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+\cvitem{project name}{\subsectionstyle{The DLX Instruction Simulation System}}
+\cvitem{project time}{\textbf{2010-11\ to\ 2011-04}}
+\cvitem{role in project}{\textbf{team leader, and is also responsible for the DLX assembler and linker development}}
+\cvitem{description}{The DLX (pronounced "Deluxe") is a RISC processor architecture designed by John L. Hennessy and David A. Patterson.This project is a software simulation system of DLX. The project includes three subsystems:the DLX instruction interpretation environment (virtual Memory, CPU, Console and other basic equipment), DLX code compiler and linker (using the top-down compiler algorithm), DLX code editor IDE.  This project is development on the .NET 3.5 libary with WPF. }
+\vspace{1em}
 
-\section{Extra 2}
-\cvlistdoubleitem{Item 1}{Item 4}
-\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
-\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+\cvitem{project name}{\subsectionstyle{daisy-editor}}
+\cvitem{project time}{\textbf{2012-02\ to\ 2012-05}}
+\cvitem{role in project}{\textbf{personal open source project}}
+\cvitem{description}{Text Editor with code highlighting developed with Html5. Totally based on \emph{canvas} element. This project is similar to the \emph{notepad++}, but is an implementation of web version. This editor supports editing text, highlight the various language, configuration color theme. At present many online IDE have similar highlighted code editor, but all are based on DOM, not html5 canvas. This project is hosted on my GitHub, demo page: http://editor.xiaoge.me}
+\newpage
 
-\section{References}
-\begin{cvcolumns}
-  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
-  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
-  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
-\end{cvcolumns}
+\cvitem{project name}{\subsectionstyle{jslex}}
+\cvitem{project time}{\textbf{2011-10\ to\ 2012-05}}
+\cvitem{role in project}{\textbf{personal open source project}}
+\cvitem{description}{jslex is a fast lexical analyser generator based on \emph{javascript}/\emph{nodejs}. This project implements all kinds of algorithm about \emph{lexical analysis} on the respected textbook \emph{Compilers: P.., T.., and Tools}. There are many different language version of Lex on the Internet (such as GNU FLex), but have not found similar projects on js/nodejs. This project is my undergraduate course graduation design. The project is hosted on GitHub: https://github.com/YuhangGe/jslex }
+\vspace{1em}
 
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+\cvitem{project name}{\subsectionstyle{simple brick game}}
+\cvitem{project time}{\textbf{2004}}
+\cvitem{role in project}{\textbf{explorer}}
+\cvitem{description}{I first meet computer programming probably in the second grade junior middle school. I wrote this simple game with \emph{VB6.0}, with which you can customize the map. From then to now, about 10 years, my love of the computer program design and coding, never fade.}
+\vspace{1em}
 
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+\section{Internship}
+\cventry{\quad{}\quad{}2012/04\newline{}to 2012/09}{Html5 Product Development}{Fii Studio}{Start-up Company at SuZhou}{}{Development of the note app which supporting handwritten, doodle, etc. Using the latest html5 and css3, to try to make the experience of web products is consistent with other platforms.}
+\cventry{\quad{}\quad{}2011/07\newline{}to 2011/10}{Tao Bao}{Web Development}{UED Department}{}{Development and maintenance of TaoBao(www.taobao.com) home page. Preparation of KISS library documentation. Writting Taobao UED sector wordpress template}
 
-\clearpage
-%-----       letter       ---------------------------------------------------------
-% recipient data
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{January 01, 1984}
-\opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
-\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
-\makelettertitle
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
 
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+\section{Professional Skills}
+\cvitem{Proficient Skills}{Javascript/Nodejs, Web, PHP, .NET, Java EE}
+\cvitem{Good Skills}{C++/C, Python, Matlab, MySQL }
+\cvitem{Other Skills}{Mac OSX, {\LaTeX}}
 
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+\section{Language Skills}
+\cvitemwithcomment{English}{CET4}{score: 599}
+\cvitemwithcomment{English}{CET6}{score: 524}
 
-Albert Einstein discovered that $e=mc^2$ in 1905.
 
-\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+\section{Personal Interests}
+\cvitem{Guitar}{\small I started playing guitar at year 2012. Now I can play some music, sing happliy with playing guitar.}
+\cvitem{Cooking}{\small Sichuan Cuisine is my specialty meals.}
+\cvitem{Ping-Pong}{\small I'm good at Ping-Pong, I like it very much.}
 
-\makeletterclosing
-
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
 
 
